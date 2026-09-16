@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root { --background: #08090d; --foreground: #f5f7fb; --muted: #8991a4; --panel: #10131b; --panel-2: #151925; --line: #252b3a; --cyan: #61e7ff; --orange: #ff8a3d; --green: #6ee7b7; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: radial-gradient(circle at 80% 0%, rgba(56, 189, 248, .08), transparent 34rem), var(--background); color: var(--foreground); font-family: 'Space Grotesk', sans-serif; }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+.mono { font-family: 'DM Mono', monospace; }
+.scanlines { position: relative; }
+.scanlines::after { content: ''; pointer-events: none; position: absolute; inset: 0; opacity: .035; background: repeating-linear-gradient(0deg, transparent 0 3px, white 4px, transparent 5px); mix-blend-mode: screen; }
+.glow { box-shadow: 0 0 0 1px rgba(97, 231, 255, .12), 0 0 42px rgba(97, 231, 255, .08); }
